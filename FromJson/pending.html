@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Instagram Followers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f7f7f7;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+      }
+      a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1.5rem 0;
+        background-color: #fff;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+      }
+      th, td {
+        text-align: left;
+        padding: 1rem;
+        vertical-align: middle;
+        border-top: 1px solid #dee2e6;
+      }
+      th {
+        background-color: #007bff;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      } 
+      .remove-button {
+        display: inline-block;
+        background-color: #ff4136;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      .remove-button:hover {
+        background-color: #d6362d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Instagram Followers</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Link</th>
+            <th>Date</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td>1</td>
+              <td>yassindaboussi</td>
+              <td><a href="https://www.instagram.com/yassindaboussi" target="_blank">https://www.instagram.com/yassindaboussi</a></td>
+              <td>19 avr. 2023 à 08:43</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>2</td>
+              <td>eminem</td>
+              <td><a href="https://www.instagram.com/eminem" target="_blank">https://www.instagram.com/eminem</a></td>
+              <td>19 avr. 2023 à 08:41</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>3</td>
+              <td>spacex</td>
+              <td><a href="https://www.instagram.com/spacex" target="_blank">https://www.instagram.com/spacex</a></td>
+              <td>19 avr. 2023 à 08:34</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>4</td>
+              <td>mrbeast</td>
+              <td><a href="https://www.instagram.com/mrbeast" target="_blank">https://www.instagram.com/mrbeast</a></td>
+              <td>19 avr. 2023 à 08:27</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>5</td>
+              <td>leagueoflegends</td>
+              <td><a href="https://www.instagram.com/leagueoflegends" target="_blank">https://www.instagram.com/leagueoflegends</a></td>
+              <td>19 avr. 2023 à 08:19</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>6</td>
+              <td>arcaneshow</td>
+              <td><a href="https://www.instagram.com/arcaneshow" target="_blank">https://www.instagram.com/arcaneshow</a></td>
+              <td>19 avr. 2023 à 08:16</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>7</td>
+              <td>riotgames</td>
+              <td><a href="https://www.instagram.com/riotgames" target="_blank">https://www.instagram.com/riotgames</a></td>
+              <td>18 avr. 2023 à 12:29</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+            <tr>
+              <td>8</td>
+              <td>googledevs</td>
+              <td><a href="https://www.instagram.com/googledevs" target="_blank">https://www.instagram.com/googledevs</a></td>
+              <td>18 avr. 2023 à 12:28</td>
+			  <td><button onclick="removeRow(this)" class="remove-button">Remove</button></td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function removeRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+      }
+    </script>
+  </body>
+</html>

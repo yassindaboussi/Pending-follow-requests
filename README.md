@@ -30,6 +30,12 @@
     <em>Figure 2: Output Pending.txt </em>
 </p>
 
+<p align="center">
+    <img src="3.png" width="550px" alt="Screenshot 2" />
+    <br />
+    <em>Figure 3: Report per year </em>
+</p>
+
 <div align=center>
 
 <h2>🌟Star this repository🌟</h2>

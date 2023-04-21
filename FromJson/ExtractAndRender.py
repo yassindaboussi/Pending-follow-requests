@@ -1,5 +1,6 @@
 import json
 from jinja2 import Environment, FileSystemLoader
+from datetime import datetime
 
 with open('pending_follow_requests.json', 'r') as f:
     data = json.load(f)
@@ -8,10 +9,12 @@ users = []
 
 for request in data['relationships_follow_requests_sent']:
     for user in request['string_list_data']:
+        timestamp = int(user['timestamp'])
+        date = datetime.utcfromtimestamp(timestamp).strftime('%d %b. %Y at %H:%M')
         users.append({
             'username': user['value'],
             'link': user['href'],
-            'date': user['timestamp']
+            'date': date
         })
 
 with open('pending.txt', 'w') as f:

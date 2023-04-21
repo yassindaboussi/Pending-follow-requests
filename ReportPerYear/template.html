@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Follow Requests Report</title>
+        <style>
+            :root {
+                --primary-color: #007bff;
+                --text-color: #333;
+                --bg-color: #f7f7f7;
+                --font-family: Arial, sans-serif;
+                --font-size: 16px;
+                --line-height: 1.6;
+                --card-width: calc(33.33% - 1rem);
+                --card-border-radius: 0.5rem;
+            }
+			
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: var(--font-family);
+                font-size: var(--font-size);
+                line-height: var(--line-height);
+                color: var(--text-color);
+                background-color: var(--bg-color);
+            }
+
+            .container-wrapper {
+                text-align: center;
+                padding-top: 2rem;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1.5rem;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center; /* Align cards to center */
+            }
+
+            .card {
+                width: var(--card-width);
+                background-color: #fff;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                border-radius: var(--card-border-radius);
+                overflow: hidden;
+                transition: transform 0.2s ease-in-out;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-header {
+                background-color: var(--primary-color);
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.1rem;
+                padding: 1rem;
+            }
+
+            .card-body {
+                padding: 1rem;
+            }
+
+            .card-body h2 {
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: var(--text-color);
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+
+            .card-body p {
+                margin: 0;
+                color: #666;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-wrapper">
+            <h1>Follow Requests Report</h1>
+            <div class="container">
+                {% for year, num_requests in requests_per_year.items() %}
+                <div class="card">
+                    <div class="card-header">{{ year }}</div>
+                    <div class="card-body">
+                        <h2>{{ num_requests }}</h2>
+                        <p>Follow requests in {{ year }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
